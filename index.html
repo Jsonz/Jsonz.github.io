@@ -10,6 +10,15 @@
       text-align: center;
       padding: 20px;
       background-image: url('Fondo.jpg');
+      color: white; /* Letras de color blanco */
+    }
+
+    #formContainer {
+      background-color: rgba(255, 255, 255, 0.3); /* Fondo semi transparente para el contenedor */
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 400px; /* Ajusta según tus necesidades */
     }
 
     label {
@@ -18,16 +27,23 @@
     }
 
     input {
-      width: 100%;
+      width: calc(100% - 16px); /* Ten en cuenta el padding */
       padding: 8px;
       margin-bottom: 16px;
       box-sizing: border-box;
+      background-color: rgba(255, 255, 255, 0.5); /* Fondo semi transparente para los textboxes */
+      border: none;
+      border-radius: 5px;
     }
 
     button {
       padding: 10px;
       font-size: 16px;
       cursor: pointer;
+      background-color: #3498db; /* Azul claro */
+      color: white;
+      border: none;
+      border-radius: 5px;
     }
 
     #result {
@@ -35,25 +51,28 @@
       padding: 10px;
       border: 1px solid #ddd;
       border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.3); /* Fondo semi transparente para el resultado */
     }
   </style>
 </head>
 <body>
 
-  <h2>Ingrese sus datos:</h2>
+  <div id="formContainer">
+    <h2>Ingrese sus datos:</h2>
 
-  <form id="myForm">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" placeholder="Nombre">
+    <form id="myForm">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" placeholder="Nombre">
 
-    <label for="apellido">Apellido:</label>
-    <input type="text" id="apellido" placeholder="Apellido">
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" placeholder="Apellido">
 
-    <label for="telefono">Teléfono:</label>
-    <input type="tel" id="telefono" placeholder="Teléfono">
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" placeholder="Teléfono">
 
-    <button type="button" onclick="imprimirDatos()">Imprimir</button>
-  </form>
+      <button type="button" onclick="imprimirDatos()">Imprimir</button>
+    </form>
+  </div>
 
   <div id="result"></div>
 
