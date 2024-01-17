@@ -1,45 +1,72 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página de Ejemplo</title>
-    <style>
-       <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página de Ejemplo</title>
-    <style>
-         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 40px;
-            background-color: #f0f0f0; /* Cambia este valor al color que desees */
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-    </style>
-</head>
-<body>
-    <h1>Bienvenido a Mi Página de Ejemplo</h1>
-    <p>¡Esta es solo una página de demostración para GitHub Pages!</p>
-    <p>Puedes personalizar esta página según tus necesidades.</p>
-    <p>¡Diviértete codificando!</p>
-</body>
-</html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Dummy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
 
-    </style>
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Bienvenido a Mi Página de Ejemplo</h1>
-    <p>¡Esta es solo una página de demostración para GitHub Pages!</p>
-    <p>Puedes personalizar esta página según tus necesidades.</p>
-    <p>¡Diviértete codificando!</p>
+
+  <h2>Ingrese sus datos:</h2>
+
+  <form id="myForm">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" placeholder="Nombre">
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" placeholder="Apellido">
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" placeholder="Teléfono">
+
+    <button type="button" onclick="imprimirDatos()">Imprimir</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    function imprimirDatos() {
+      const nombre = document.getElementById('nombre').value;
+      const apellido = document.getElementById('apellido').value;
+      const telefono = document.getElementById('telefono').value;
+
+      const datosIngresados = `Nombre: ${nombre}, Apellido: ${apellido}, Teléfono: ${telefono}`;
+
+      document.getElementById('result').innerText = datosIngresados;
+    }
+  </script>
+
 </body>
 </html>
